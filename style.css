@@ -1,0 +1,2 @@
+/* Deoxys Fan Site Styles */
+:root{--bg:#050712;--panel:rgba(13,18,38,.8);--red:#ff2e63;--cyan:#45d9ff;--gold:#ffd166;--text:#f4f7ff;--muted:#aab6d8;--line:rgba(255,255,255,.13);}*{box-sizing:border-box;}html{scroll-behavior:smooth;}body{margin:0;min-height:100vh;color:var(--text);font-family:system-ui;background:var(--bg);}header{text-align:center;padding:60px 20px;}h1{font-size:64px;}section{padding:24px;margin:16px;border:1px solid var(--line);border-radius:16px;background:var(--panel);}button.active{border-color:var(--red);}
