@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEOXYS // Cosmic DNA Archive</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <div class="orb"></div>
+    <span class="badge">POKEAPI CONNECTED FAN ARCHIVE</span>
+    <h1>DEOXYS</h1>
+    <p class="lead">
+      フォルムを切り替えると、概要・種族値・バトル解説・スプライトが連動して変化するデオキシス専用ファンアーカイブ。
+    </p>
+  </header>
+
+  <div class="control-panel" id="controlPanel">
+    <div class="control-inner">
+      <div class="form-tabs" id="formTabs"></div>
+
+      <div class="section-nav">
+        <button type="button" data-scroll="overview" class="active">概要</button>
+        <button type="button" data-scroll="battle">バトル</button>
+        <button type="button" data-scroll="stats">種族値</button>
+        <button type="button" data-scroll="compare">比較</button>
+        <button type="button" data-scroll="gallery">スプライト</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="overview" data-spy-section>
+      <h2>概要</h2>
+      <div class="hero-grid">
+        <div class="sprite-card">
+          <img id="mainSprite" alt="デオキシスのスプライト" />
+        </div>
+
+        <div class="info-stack">
+          <div class="data-card">
+            <h3 id="pokemonName">Loading...</h3>
+            <p class="muted" id="flavor">PokeAPIからデータを取得中...</p>
+            <div class="pill-row" id="types"></div>
+            <div class="pill-row" id="abilities"></div>
+            <p class="muted" id="meta"></p>
+          </div>
+
+          <div class="form-detail">
+            <h3 id="currentFormTitle">フォルム情報</h3>
+            <p class="muted" id="currentFormNote"></p>
+            <div class="pill-row" id="currentFormTags"></div>
+          </div>
+
+          <div class="profile-card">
+            <h3>Fan Notes</h3>
+            <p class="muted">
+              デオキシスの魅力は、宇宙生命体・DNA・変異体というSF的異物感にある。
+              同一ポケモンでありながら、フォルムごとに役割が極端に変わる点が最大の個性。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="battle" data-spy-section>
+      <h2>バトル解説</h2>
+      <div class="battle-grid">
+        <div class="battle-card">
+          <h3 id="battleRoleTitle">役割</h3>
+          <p class="muted" id="battleRoleText"></p>
+          <div class="pill-row" id="battleTags"></div>
+        </div>
+
+        <div class="battle-card">
+          <h3>得意な動き</h3>
+          <p class="muted" id="battleStyleText"></p>
+        </div>
+
+        <div class="battle-card">
+          <h3>技候補</h3>
+          <div class="move-list" id="moveList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" data-spy-section>
+      <h2>種族値</h2>
+      <p class="muted">
+        上部のフォルムを切り替えると、PokeAPIから該当フォルムの種族値を取得して反映します。
+      </p>
+      <div class="stats" id="statsBox"></div>
+    </section>
+
+    <section id="compare" data-spy-section>
+      <h2>フォルム比較</h2>
+      <p class="muted">
+        4フォルムの方向性を同時比較できます。カードを押すと、そのフォルムに切り替わります。
+      </p>
+      <div class="compare-grid" id="compareGrid"></div>
+    </section>
+
+    <section id="forms">
+      <h2>フォルム解説</h2>
+      <div class="form-summary-grid" id="formSummaryGrid"></div>
+    </section>
+
+    <section id="gallery" data-spy-section>
+      <h2>スプライト</h2>
+      <div class="gallery" id="galleryBox"></div>
+    </section>
+  </main>
+
+  <footer>
+    非公式ファンサイト案。Pokémon / ポケットモンスター関連の権利は各権利者に帰属します。データ取得元: PokeAPI。
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
