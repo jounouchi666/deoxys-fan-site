@@ -1,4 +1,5 @@
 const DEX_NO = "#386";
+const JAPANESE_NAME = "デオキシス";
 
 const typeJaMap = {
   normal: "ノーマル",
